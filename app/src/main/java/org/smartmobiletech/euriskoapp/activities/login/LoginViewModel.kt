@@ -6,16 +6,8 @@ import androidx.lifecycle.ViewModel
 import org.smartmobiletech.euriskoapp.modules.User
 import org.smartmobiletech.euriskoapp.room.DbRepository
 
-//import org.smartmobiletech.euriskoapp.room.RoomDb
-
 class LoginViewModel : ViewModel() {
 
-//    private var roomDb: RoomDb? = null
-//
-//    private fun initDb(context: Context): RoomDb {
-////        return RoomDb.getDataClient(context)
-//    }
-//
     fun getUser(context: Context, user: String): LiveData<User> {
         return DbRepository.getUser(context, user)
     }

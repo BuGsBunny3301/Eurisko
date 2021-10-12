@@ -21,7 +21,6 @@ import java.time.LocalDate
 import java.util.*
 import kotlin.collections.ArrayList
 
-//import org.smartmobiletech.euriskoapp.room.RoomDb
 
 class LoginActivity : AppCompatActivity() {
 
@@ -40,17 +39,10 @@ class LoginActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
-//        getUser()
         getUsers()
         initViews()
     }
 
-    private fun getUser() {
-        viewModel.getUser(this, "user").observe(this, {
-            user = it
-            Toast.makeText(this@LoginActivity, it.username, Toast.LENGTH_LONG).show()
-        })
-    }
 
     private fun initViews() {
         edtName = findViewById(R.id.edt_username)
