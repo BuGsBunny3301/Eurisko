@@ -31,13 +31,14 @@ class SplashScreen : AppCompatActivity() {
         })
 
 
-        if(AppPreferences.username == "" && AppPreferences.pass == "")
+        if(AppPreferences.username == "" && AppPreferences.pass == "") {
             Handler().postDelayed({
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-                finish()
-            }, 2000)
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                    finish()
+                }, 2000)
+        }
         else
             Handler().postDelayed({
                 val intent = Intent(this, MainActivity::class.java)

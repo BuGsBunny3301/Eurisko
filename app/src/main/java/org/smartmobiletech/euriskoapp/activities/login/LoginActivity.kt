@@ -58,6 +58,7 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             for (user in users) {
                 if (user.username == edtName.text.toString() && user.password == edtPass.text.toString()) {
+                    AppPreferences.watch = 0L
                     if(rememberMe.isChecked) {
                         AppPreferences.username = user.username
                         AppPreferences.pass = user.password
